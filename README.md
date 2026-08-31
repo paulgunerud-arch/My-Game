@@ -2,4 +2,4 @@ This is a game that I have worked hard on, putting in 8+ hours into without slee
 
 https://paulgunerud-arch.github.io/My-Game/
 
-DO NOT USE CHROME UNDER ANY CIRCUMSTANCES!!!
+Please do not use chrome, as it messes up the UI, and the experience is more polished in other browsers
