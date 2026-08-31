@@ -102,7 +102,17 @@ Placeholder Placeholders like a Placeholder Placeholder.
 <script>
 
 let count = 0;
-let mode = 1;
+
+
+/* =========================
+   MODE SYSTEM
+   ========================= */
+
+const params = new URLSearchParams(
+    window.location.search
+);
+
+let mode2 = params.get("mode2") === "true";
 
 
 /* =========================
@@ -110,12 +120,17 @@ let mode = 1;
    ========================= */
 
 function button1click() {
-  if (mode === 1) {
-    document.getElementById("p1").textContent +=
-        " This text Informs you that you have infact pressed the button the says 'Click Me', Congrats :P";
-  } else {
-    document.getElementById("p1").textContent += "P: stargnoC , 'eM kcilC' syas eht nottub eht desserp tcafni evah uoy taht uoy smrofnI txet sihT "
-}
+
+    if (!mode2) {
+
+        document.getElementById("p1").textContent +=
+            " This text Informs you that you have infact pressed the button the says 'Click Me', Congrats :P";
+
+    } else {
+
+        document.getElementById("p1").textContent +=
+            "P: stargnoC , 'eM kcilC' syas eht nottub eht desserp tcafni evah uoy taht uoy smrofnI txet sihT ";
+    }
 
     document.getElementById("button1")
         .setAttribute("onclick", "button2c()");
@@ -130,34 +145,42 @@ function button2c() {
 
     document.getElementById("b2")
         .setAttribute("onclick", "b3c()");
-if (mode === 1) {
-    alert("stop it >:(");
-}else{
-    alert("(:> ti pots")
-}
+
+    if (!mode2) {
+        alert("stop it >:(");
+    } else {
+        alert("(:> ti pots");
+    }
+
     document.getElementById("b2").id = "b3";
 }
 
 
 function conf() {
-if (mode === 1){
-    if (confirm("Are you sure?")) {
-        button1click();
+
+    if (!mode2) {
+
+        if (confirm("Are you sure?")) {
+            button1click();
+        }
+
+    } else {
+
+        if (confirm("?erus uoy erA")) {
+            button1click();
+        }
     }
-  } else {
-      if (confirm("?erus uoy erA")) {
-        button1click();
-    }
-  }
 }
 
 
 function b3c() {
-if (mode === 1) {
-    alert("STOP!!!!!!!!!!!!!!");
-} else {
-  alert("!!!!!!!!!!!!!!POTS");
-}
+
+    if (!mode2) {
+        alert("STOP!!!!!!!!!!!!!!");
+    } else {
+        alert("!!!!!!!!!!!!!!POTS");
+    }
+
     document.getElementById("b3")
         .setAttribute("onclick", "b4c()");
 
@@ -166,11 +189,13 @@ if (mode === 1) {
 
 
 function b4c() {
-  if (mode ===1) {
-    alert("brain-anger.exe is not responding  :(");
-  } else {
-    alert("(: gnidnopser ton si exe.regna-niarb");
-  }
+
+    if (!mode2) {
+        alert("brain-anger.exe is not responding  :(");
+    } else {
+        alert("(: gnidnopser ton si exe.regna-niarb");
+    }
+
     document.getElementById("b4").textContent = "";
 
     document.getElementById("b4")
@@ -183,12 +208,14 @@ function whileDed() {
     count++;
 
     if (count >= 5) {
-    if (mode === 1){
-        document.getElementById("b4").textContent =
-            "Hi, what is your name?";
-    } else {
-        document.getElementById("b4").textContent = "?eman ruoy si tahw ,iH";
-    }
+
+        if (!mode2) {
+            document.getElementById("b4").textContent =
+                "Hi, what is your name?";
+        } else {
+            document.getElementById("b4").textContent =
+                "?eman ruoy si tahw ,iH";
+        }
 
         document.getElementById("b4")
             .setAttribute("onclick", "Rebooted()");
@@ -210,7 +237,7 @@ function Rebooted() {
            MODE 1 NAMES
            ===================== */
 
-        if (mode === 1) {
+        if (!mode2) {
 
             if (name === "Paul") {
 
@@ -425,35 +452,17 @@ function nottubOG() {
 
 
 /* =========================
-   SWITCH TO MODE 2
+   SWITCH MODES
    ========================= */
 
 function restartGame() {
 
-    mode = !mode;
+    mode2 = !mode2;
 
     window.location.href =
-        window.location.pathname + "?mode=" + mode;
-}
-
-
-/* =========================
-   DETECT MODE 2
-   ========================= */
-
-const params = new URLSearchParams(
-    window.location.search
-);
-
-if (params.get("mode") === "2") {
-
-    mode = 2;
-
-    document.getElementById("p1").textContent =
-        ".redlohecalP redlohecalP a ekil sredlohecalP redlohecalP .redlohecalP osla nac redlohecalP ,redlohecalP latot si redlohecalP .emag ym gnibircsed hpargarap a si sihT";
-
-    document.getElementById("button1").textContent =
-        "!eM kcilC";
+        window.location.pathname +
+        "?mode2=" +
+        mode2;
 }
 
 </script>
