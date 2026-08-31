@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<style>
+
+#gotint {
+  position: fixed;
+  inset: 0;
+  background: rgba(255, 0, 0, 1);
+  z-index: 1;
+  display: none;
+}
+
+#GOtxt {
+  position: fixed;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  transform: translateY(-50%);
+  margin: 0;
+  z-index: 2;
+  text-align: center;
+  font-size: 60px;
+  display: none;
+}
+
+#Wintxt {
+  position: fixed;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  transform: translateY(-50%);
+  margin: 0;
+  z-index: 4;
+  text-align: center;
+  font-size: 70px;
+  color: white;
+  display: none;
+}
+
+#wintint {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 255, 0, 1);
+  z-index: 3;
+  display: none;
+}
+
+#RB {
+  display: none;
+  position: fixed;
+  z-index: 10;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 30px;
+}
+
+</style>
+</head>
+
+<body>
+
+<h1 style="text-align: center;">My Game</h1>
+
+<h2 id="GOtxt">Game Over</h2>
+
+<h2 id="Wintxt">YOU WIN!</h2>
+
+<p id="p1">
+This is a paragraph describing my game.
+Placeholder is totaly Placeholder,
+Placeholder can also Placeholder.
+Placeholder Placeholders like a Placeholder Placeholder.
+</p>
+
+<div style="text-align: center;">
+    <button
+        onclick="conf()"
+        id="button1"
+        style="font-size: 50px; position: relative; top: 50px;">
+        Click Me
+    </button>
+</div>
+
+<div style="text-align: center;">
+    <img
+        style="position: relative; top: 100px;"
+        src="Ace-Sitting.JPEG"
+        width="300">
+</div>
+
+<div id="gotint"></div>
+<div id="wintint"></div>
+
+<button onclick="restartGame()" id="RB">
+    Restart
+</button>
+
+
+<script>
+
+let count = 0;
+let mode = 1;
+
+
+/* =========================
+   MODE 1
+   ========================= */
+
+function button1click() {
+  if (mode === 1) {
+    document.getElementById("p1").textContent +=
+        " This text Informs you that you have infact pressed the button the says 'Click Me', Congrats :P";
+  } else {
+    document.getElementById("p1").textContent += "P: stargnoC , 'eM kcilC' syas eht nottub eht desserp tcafni evah uoy taht uoy smrofnI txet sihT "
+}
+
+    document.getElementById("button1")
+        .setAttribute("onclick", "button2c()");
+
+    document.getElementById("button1").innerHTML = "&#128274;";
+
+    document.getElementById("button1").id = "b2";
+}
+
+
+function button2c() {
+
+    document.getElementById("b2")
+        .setAttribute("onclick", "b3c()");
+if (mode === 1) {
+    alert("stop it >:(");
+}else{
+    alert("(:> ti pots")
+}
+    document.getElementById("b2").id = "b3";
+}
+
+
+function conf() {
+if (mode === 1){
+    if (confirm("Are you sure?")) {
+        button1click();
+    }
+  } else {
+      if (confirm("?erus uoy erA")) {
+        button1click();
+    }
+  }
+}
+
+
+function b3c() {
+
+    alert("STOP!!!!!!!!!!!!!!");
+
+    document.getElementById("b3")
+        .setAttribute("onclick", "b4c()");
+
+    document.getElementById("b3").id = "b4";
+}
+
+
+function b4c() {
+
+    alert("brain-anger.exe is not responding  :(");
+
+    document.getElementById("b4").textContent = "";
+
+    document.getElementById("b4")
+        .setAttribute("onclick", "whileDed()");
+}
+
+
+function whileDed() {
+
+    count++;
+
+    if (count >= 5) {
+
+        document.getElementById("b4").textContent =
+            "Hi, what is your name?";
+
+        document.getElementById("b4")
+            .setAttribute("onclick", "Rebooted()");
+    }
+}
+
+
+/* =========================
+   NAME CHECKER
+   ========================= */
+
+function Rebooted() {
+
+    let name = prompt("What is your name");
+
+    if (name) {
+
+        /* =====================
+           MODE 1 NAMES
+           ===================== */
+
+        if (mode === 1) {
+
+            if (name === "Paul") {
+
+                winbutton();
+
+            } else if (name === "Ace") {
+
+                AceB();
+
+            } else if (
+                name === "(x^2+y^2-1)^3<=x^2y^3"
+            ) {
+
+                MHeartB();
+
+            } else if (
+                name === "markiplier" ||
+                name === "kindlykein" ||
+                name === "mrbeast" ||
+                name === "YT"
+            ) {
+
+                YtB();
+
+            } else if (name === "Bad Ending") {
+
+                GOevent();
+
+            } else if (name === "Good Ending") {
+
+                TGEiN();
+
+            } else if (name === "Winevent()") {
+
+                Winevent();
+
+            } else if (name === "Your Mom") {
+
+                VeryMad();
+
+            } else {
+
+                alert("you said " + name);
+                reboot2();
+            }
+
+
+        /* =====================
+           MODE 2 NAMES
+           ===================== */
+
+        } else {
+
+            if (name === "nohJ") {
+
+                tneveniW();
+
+            } else if (name === "bocaJ") {
+
+                tneveniW();
+
+            } else if (name === "remeihelgniJ") {
+
+                tneveniW();
+
+            } else if (name === "tdimhcS") {
+
+                tneveniW();
+
+            } else {
+
+                alert("dais uoy " + name);
+                nottubOG();
+            }
+        }
+    }
+}
+
+
+/* =========================
+   MODE 1 FAIL
+   ========================= */
+
+function reboot2() {
+
+    document.getElementById("b4").textContent =
+        "Oh, it's you, >:(";
+
+    document.getElementById("b4")
+        .setAttribute("onclick", "Rebooted3()");
+}
+
+
+function Rebooted3() {
+
+    alert("Don't touch me!");
+
+    count++;
+
+    if (count >= 10) {
+        GOevent();
+    }
+}
+
+
+/* =========================
+   ENDINGS
+   ========================= */
+
+function GOevent() {
+
+    document.getElementById("GOtxt").style.display = "block";
+    document.getElementById("gotint").style.display = "block";
+    document.getElementById("RB").style.display = "block";
+}
+
+
+function Winevent() {
+
+    document.getElementById("Wintxt").style.display = "block";
+    document.getElementById("wintint").style.display = "block";
+    document.getElementById("RB").style.display = "block";
+}
+
+
+function winbutton() {
+
+    document.getElementById("b4").textContent =
+        "Congrats, that is the name of my creator :D";
+
+    document.getElementById("b4")
+        .setAttribute("onclick", "Winevent()");
+}
+
+
+function AceB() {
+
+    document.getElementById("b4").textContent =
+        "Woof Woof Bark Ruff Woof";
+
+    document.getElementById("b4")
+        .setAttribute("onclick", "Winevent()");
+
+    document.getElementById("Wintxt").textContent =
+        "Woof Bark!, you dug through the games files, didn't you?";
+}
+
+
+function MHeartB() {
+
+    document.getElementById("b4").textContent =
+        "Awwww, i love math too";
+
+    document.getElementById("b4")
+        .setAttribute("onclick", "Winevent()");
+}
+
+
+function YtB() {
+
+    document.getElementById("b4").textContent =
+        "Omigosh a youtuber???";
+
+    alert("you should SUBSCRIBE right now");
+
+    document.getElementById("b4")
+        .setAttribute("onclick", "Winevent()");
+
+    document.getElementById("Wintxt").textContent =
+        "Congrats, YouTuber!";
+}
+
+
+function TGEiN() {
+
+    document.getElementById("GOtxt").textContent =
+        "Nice Try, Buddy";
+
+    GOevent();
+}
+
+
+function VeryMad() {
+
+    document.getElementById("GOtxt").textContent =
+        "🤬 no one talks about my mom!";
+
+    GOevent();
+}
+
+
+/* =========================
+   MODE 2 ENDINGS
+   ========================= */
+
+function tneveniW() {
+
+    document.getElementById("Wintxt").textContent =
+        "!NiW uoY";
+
+    Winevent();
+}
+
+
+function nottubOG() {
+
+    document.getElementById("GOtxt").textContent =
+        "revO emaG";
+
+    GOevent();
+}
+
+
+/* =========================
+   SWITCH TO MODE 2
+   ========================= */
+
+function restartGame() {
+
+    mode = 2;
+
+    window.location.href =
+        window.location.pathname + "?mode=2";
+}
+
+
+/* =========================
+   DETECT MODE 2
+   ========================= */
+
+const params = new URLSearchParams(
+    window.location.search
+);
+
+if (params.get("mode") === "2") {
+
+    mode = 2;
+
+    document.getElementById("p1").textContent =
+        ".redlohecalP redlohecalP a ekil sredlohecalP redlohecalP .redlohecalP osla nac redlohecalP ,redlohecalP latot si redlohecalP .emag ym gnibircsed hpargarap a si sihT";
+
+    document.getElementById("button1").textContent =
+        "!eM kcilC";
+}
+
+</script>
+
+</body>
+</html>
