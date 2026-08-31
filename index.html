@@ -183,9 +183,12 @@ function whileDed() {
     count++;
 
     if (count >= 5) {
-
+    if (mode === 1){
         document.getElementById("b4").textContent =
             "Hi, what is your name?";
+    } else {
+        document.getElementById("b4").textContent = "?eman ruoy si tahw ,iH";
+    }
 
         document.getElementById("b4")
             .setAttribute("onclick", "Rebooted()");
@@ -427,10 +430,10 @@ function nottubOG() {
 
 function restartGame() {
 
-    mode = 2;
+    mode = !mode;
 
     window.location.href =
-        window.location.pathname + "?mode=2";
+        window.location.pathname + "?mode=" + mode;
 }
 
 
